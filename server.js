@@ -3,7 +3,6 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const port = 3000;
 app.use(cors());
 app.use(express.json());
 
@@ -18,10 +17,12 @@ app.post("/person", (req, res) => {
   res.status(200).send(`${parseInt(person.age) + 5}`);
 });
 
-function serverRun() {
+function start(port) {
   app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
   });
 }
 
-module.exports = { start: serverRun, app: app };
+module.exports = {
+    start: start, 
+    app: app };

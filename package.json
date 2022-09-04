@@ -21,7 +21,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
-    "epxress": "^0.0.1-security",
     "express": "^4.18.1"
   },
   "devDependencies": {
