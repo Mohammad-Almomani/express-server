@@ -17,6 +17,7 @@ app.post("/person", (req, res) => {
   res.status(200).send(`${parseInt(person.age) + 5}`);
 });
 
+/* istanbul ignore next */ 
 function start(port) {
   app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
